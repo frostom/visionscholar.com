@@ -1,92 +1,248 @@
-
-<!DOCTYPE html>
+<section id="about" class="section">
+        <div class="container">
+            <h2>About Vision Scholar</h2>
+            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; align-items: center; margin-bottom: 3rem;">
+                <div style="text-align: center;">
+                    <img src="data:image/jpeg;base64,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<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vision Scholar - Professional Development & Workshops</title>
     <style>
-        /* ...[Your existing styles remain unchanged]... */
-        .testimonials-section {
-            background: #f8f9fa;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background: #34495e;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        nav li {
+            margin: 0 1rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        nav a:hover {
+            background: #3498db;
+        }
+        
+        .hero {
+            background: #ecf0f1;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 2.2em;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+        
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            background: #e74c3c;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: #c0392b;
+        }
+        
+        .section {
             padding: 4rem 0;
         }
-        .testimonials-grid {
+        
+        .section h2 {
+            text-align: center;
+            font-size: 2.2em;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+        }
+        
+        .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
-        .testimonial-card {
+        
+        .service-card {
             background: white;
             padding: 2rem;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
         }
-        .testimonial-text {
-            font-style: italic;
-            color: #2c3e50;
-        }
-        .testimonial-source {
-            margin-top: 1rem;
+        
+        .service-card h3 {
             color: #3498db;
+            margin-bottom: 1rem;
+            font-size: 1.5em;
+        }
+        
+        .consultation-form {
+            background: #3498db;
+            color: white;
+            padding: 4rem 0;
+        }
+        
+        .consultation-form h2 {
+            color: white;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
             font-weight: bold;
         }
-        .about-section {
-            background: #ecf0f1;
-            padding: 4rem 0;
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
         }
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: flex-start;
-            gap: 2rem;
+        
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
         }
-        .about-photo {
-            flex: 0 0 150px;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background: #ddd;
-            background-size: cover;
-            background-position: center;
-            margin-bottom: 2rem;
-        }
-        .faq-section {
+        
+        .office-hours {
             background: #f8f9fa;
-            padding: 4rem 0;
-        }
-        .faq-list {
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 2rem 0 0 0;
-        }
-        .faq-item {
-            margin-bottom: 2rem;
-        }
-        .blog-section {
-            background: #fff;
-            padding: 4rem 0;
-        }
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 2rem;
-        }
-        .blog-card {
-            background: #ecf0f1;
-            border-radius: 10px;
             padding: 2rem;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: center;
         }
-        .cta-row {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 2rem;
-            flex-wrap: wrap;
+        
+        .office-hours h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        
+        .hours-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .day-hours {
+            background: white;
+            padding: 1rem;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero h2 {
+                font-size: 1.8em;
+            }
+            
+            .hero p {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
@@ -95,11 +251,6 @@
         <div class="container">
             <h1>Vision Scholar</h1>
             <p>Professional Development for Individuals, Schools & Districts</p>
-            <div class="cta-row">
-                <a href="sample-guide.pdf" class="cta-button">Download Our Services Guide</a>
-                <a href="#blog" class="cta-button">Educational Tips & Resources</a>
-                <a href="#testimonials" class="cta-button">See Testimonials</a>
-            </div>
         </div>
     </header>
 
@@ -108,11 +259,7 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#consultation">Free Consultation</a></li>
-                <li><a href="#blog">Resources</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -121,7 +268,7 @@
     <section id="home" class="hero">
         <div class="container">
             <h2>Transform Your Organization's Potential</h2>
-            <p>Build and facilitate professional development opportunities, workshops, and ongoing training for leaders, teams, and staff, fully tailored to individual, school, and district needs.</p>
+            <p>We build and facilitate professional development opportunities, workshops, and ongoing training for leaders, teams, and staff tailored to the needs and initiatives of individuals, schools, and districts.</p>
             <a href="#consultation" class="cta-button">Get Your FREE 30-Minute Consultation</a>
         </div>
     </section>
@@ -131,91 +278,16 @@
             <h2>Our Services</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <h3>Leadership Development</h3>
-                    <p>Grow your leaders with proven strategies for collaboration, vision, and everyday influence.</p>
+                    <h3>Professional Development</h3>
+                    <p>Customized professional development programs designed to enhance skills, boost performance, and drive organizational success. We work closely with your team to identify needs and create targeted solutions.</p>
                 </div>
                 <div class="service-card">
-                    <h3>Team Building Workshops</h3>
-                    <p>Hands-on sessions to strengthen trust, communication, and collective impact across your team.</p>
+                    <h3>Workshops & Training</h3>
+                    <p>Interactive workshops and comprehensive training sessions that engage participants and deliver measurable results. From leadership development to team building, we cover all aspects of organizational growth.</p>
                 </div>
                 <div class="service-card">
-                    <h3>Curriculum Training</h3>
-                    <p>Empower educators to design, align, and deliver powerful curriculum for all learners.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Educational Technology</h3>
-                    <p>Integrate technology to enhance teaching, learning, and classroom culture.</p>
-                </div>
-                <div class="service-card">
-                    <h3>AI Specialist PD</h3>
-                    <p>Leverage AI tools and strategies for instruction, assessment, and school operations.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2>About Vision Scholar</h2>
-            <div class="about-content">
-                <div class="about-photo" style="background-image: url('https://drive.google.com/file/d/1jZq8QYnA2Vt3jgDkWctZXMH7OhICOMH-/view?usp=sharing');"></div>
-                <div>
-                    <p>
-                        As a proud mother of three daughters and first-generation immigrant, Fadia Rostom Makdisi understands education's transformative power from lived experience. She has dedicated her career to empowering others through knowledge, building bridges that unite communities.
-                    </p>
-                    <p>
-                        With over 30 years' collaborative experience in U.S. and international education across public and private sectors, Fadia is guided by her belief that education is a unifier—transcending cultures to foster shared understanding. A graduate of Damascus University, Massachusetts College of Liberal Arts, and Fitchburg State University, Fadia has served as a professor assistant and principal, inspiring during unprecedented challenges like COVID-19, while ensuring educational excellence and accreditation.
-                    </p>
-                    <p>
-                        A Berkshire resident by choice, Fadia invests deeply in regional growth as an executive member of the BCC Alumni Board, strengthening the bonds that make the Berkshires a place where all backgrounds can thrive.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="testimonials" class="testimonials-section">
-        <div class="container">
-            <h2>What Clients Say</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-text">“Mrs. Makdisi was engaging and fun through this PD and gave many opportunities for educators to take risks and grow.”</div>
-                    <div class="testimonial-source">Pittsfield Public Schools</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-text">“The presenter was amazing! I’m looking forward to another workshop should she present. Very engaging and the presenter was very knowledgeable.”</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-text">“Fadia was incredibly relatable, compassionate, and organized. I would attend a workshop of hers in the future!”</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-text">“Best presenter and presentation I have had in years! Engaging and fun!”</div>
-                    <div class="testimonial-source">Westfield Schools</div>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 2rem;">
-                <p>
-                    Delivered presentations at local, national, and international conferences: NEASC, DLAC, SEBC, MATSOL, BHS, FACTS Conference, CBRSD, Pittsfield Public Schools, Saint Agnes Academy, St Mary’s Academy, BERK12 Educational Professional Day.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section id="faq" class="faq-section">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <strong>How long are typical workshops?</strong>
-                    <p>Most are 90 minutes to a half day; longer series by request.</p>
-                </div>
-                <div class="faq-item">
-                    <strong>Do you offer virtual training?</strong>
-                    <p>Yes, all sessions can be delivered virtually, in-person, or hybrid.</p>
-                </div>
-                <div class="faq-item">
-                    <strong>What’s included in the consultation?</strong>
-                    <p>Needs assessment, goals review, and personalized recommendations with next steps.</p>
+                    <h3>Ongoing Support</h3>
+                    <p>Continuous training and support programs that ensure lasting change and sustained improvement. We partner with your organization for long-term success and growth.</p>
                 </div>
             </div>
         </div>
@@ -225,28 +297,34 @@
         <div class="container">
             <h2>Schedule Your FREE 30-Minute Consultation</h2>
             <div class="form-container">
-                <!-- Formspree integration for automatic emails -->
-                <form action="https://formspree.io/f/{your_form_id}" method="POST" id="consultationForm">
+
+                
+                <form id="consultationForm">
                     <div class="form-group">
                         <label for="name">Full Name *</label>
                         <input type="text" id="name" name="name" required>
                     </div>
+                    
                     <div class="form-group">
                         <label for="email">Email Address *</label>
                         <input type="email" id="email" name="email" required>
                     </div>
+                    
                     <div class="form-group">
                         <label for="phone">Phone Number</label>
                         <input type="tel" id="phone" name="phone">
                     </div>
+                    
                     <div class="form-group">
                         <label for="organization">Organization Name *</label>
                         <input type="text" id="organization" name="organization" required>
                     </div>
+                    
                     <div class="form-group">
                         <label for="role">Your Role/Title</label>
                         <input type="text" id="role" name="role">
                     </div>
+                    
                     <div class="form-group">
                         <label for="preferred-day">Preferred Day</label>
                         <select id="preferred-day" name="preferred-day">
@@ -256,6 +334,7 @@
                             <option value="thursday">Thursday</option>
                         </select>
                     </div>
+                    
                     <div class="form-group">
                         <label for="preferred-time">Preferred Time</label>
                         <select id="preferred-time" name="preferred-time">
@@ -270,32 +349,14 @@
                             <option value="4:00 PM">4:00 PM</option>
                         </select>
                     </div>
+                    
                     <div class="form-group">
                         <label for="challenges">What challenges is your organization facing? *</label>
                         <textarea id="challenges" name="challenges" placeholder="Please describe your current challenges and what you hope to achieve through professional development..." required></textarea>
                     </div>
+                    
                     <button type="submit" class="cta-button" style="width: 100%;">Schedule My Free Consultation</button>
                 </form>
-            </div>
-        </div>
-    </section>
-
-    <section id="blog" class="blog-section">
-        <div class="container">
-            <h2>Educational Tips & Resources</h2>
-            <div class="blog-grid">
-                <div class="blog-card">
-                    <h3>3 Ways to Build Team Culture in Schools</h3>
-                    <p>Learn strategies to foster trust and collaboration among staff.</p>
-                </div>
-                <div class="blog-card">
-                    <h3>AI in Education: Myths & Best Practices</h3>
-                    <p>Demystify AI tools and see practical classroom applications.</p>
-                </div>
-                <div class="blog-card">
-                    <h3>Free & Low-Cost EdTech for Districts</h3>
-                    <p>Explore recommended platforms and resources for budget-conscious schools.</p>
-                </div>
             </div>
         </div>
     </section>
@@ -308,7 +369,6 @@
                     Ready to transform your organization's potential? We're here to help you create customized professional development solutions that drive real results.
                 </p>
                 <div style="background: #f8f9fa; padding: 2rem; border-radius: 10px;">
-                    <div class="about-photo" style="background-image: url('https://drive.google.com/file/d/1jZq8QYnA2Vt3jgDkWctZXMH7OhICOMH-/view?usp=sharing'); margin: 0 auto 1rem auto;"></div>
                     <h3 style="color: #2c3e50; margin-bottom: 1rem;">Get In Touch</h3>
                     <p><strong>Email:</strong> frostom@visionscholar.com</p>
                     <p><strong>Phone:</strong> (413) 770-2944</p>
@@ -343,10 +403,26 @@
             });
         });
 
-        // Optional: Form auto-reply confirmation for visitors
+        // Form submission handler
         document.getElementById('consultationForm').addEventListener('submit', function(e) {
-            // Formspree handles reply; optionally show message
-            alert('Thank you for your interest! You will receive a confirmation email and we will contact you within 24 hours.');
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Simple validation
+            if (!data.name || !data.email || !data.organization || !data.challenges) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Here you would typically send the data to your server
+            // For now, we'll show a success message
+            alert('Thank you for your interest! We will contact you within 24 hours to schedule your free consultation.');
+            
+            // Reset form
+            this.reset();
         });
     </script>
 </body>
