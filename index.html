@@ -161,16 +161,21 @@
       box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
 
-    #consultation-info {
-      background:#f4f6f8;
-      text-align:center;
+    #consultation {
+      background:#f9f9f9;
       padding:3rem 1rem;
     }
 
-    #consultation-info p {
-      font-size:1.2em;
-      max-width:600px;
-      margin: 1rem auto;
+    #consultation iframe {
+      border: none;
+      width: 100%;
+      max-width: 700px;
+      height: 900px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     footer {
@@ -206,6 +211,10 @@
       .services-grid {
         grid-template-columns: 1fr !important;
       }
+
+      #consultation iframe {
+        height: 1200px;
+      }
     }
   </style>
 </head>
@@ -223,7 +232,7 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#consultation-info">Free Consultation</a></li>
+        <li><a href="#consultation">Free Consultation</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -233,7 +242,7 @@
     <div class="container">
       <h2>Transform Your Potential in the Age of AI</h2>
       <p>We design and facilitate professional development, workshops, and ongoing support to help individuals, teams, and organizations thrive using AI and technology to enhance work and life.</p>
-      <a href="#consultation-info" class="cta-button">Get Your FREE 30-Minute Consultation</a>
+      <a href="#consultation" class="cta-button">Get Your FREE 30-Minute Consultation</a>
     </div>
   </section>
 
@@ -281,10 +290,10 @@
     </div>
   </section>
 
-  <section id="consultation-info" class="section">
+  <section id="consultation" class="section">
     <div class="container">
       <h2>Book Your Free 30-Minute Consultation</h2>
-      <p>Book your free 30-minute consultation with us to discuss your needs. Email <a href="mailto:frostom@visionscholar.com">frostom@visionscholar.com</a> for a calendar link.</p>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdVTbk8f6J8GgYqxqZ9qhDeQQOojtYV6CD3kNcM3oN3Dgt4zQ/viewform?embedded=true"></iframe>
     </div>
   </section>
 
@@ -315,7 +324,6 @@
   </footer>
 
 <script>
-  // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
