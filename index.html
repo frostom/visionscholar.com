@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision Scholar Educational Consulting - Professional Development & Workshops</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background: #34495e;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        nav li {
+            margin: 0 1rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        nav a:hover {
+            background: #3498db;
+        }
+        
+        .hero {
+            background: #ecf0f1;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 2.2em;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+        
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            background: #e74c3c;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: #c0392b;
+        }
+        
+        .section {
+            padding: 4rem 0;
+        }
+        
+        .section h2 {
+            text-align: center;
+            font-size: 2.2em;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .service-card h3 {
+            color: #3498db;
+            margin-bottom: 1rem;
+            font-size: 1.5em;
+        }
+        
+        .consultation-form {
+            background: #3498db;
+            color: white;
+            padding: 4rem 0;
+        }
+        
+        .consultation-form h2 {
+            color: white;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        
+        .office-hours {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .office-hours h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        
+        .hours-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .day-hours {
+            background: white;
+            padding: 1rem;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero h2 {
+                font-size: 1.8em;
+            }
+            
+            .hero p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Vision Scholar Educational Consulting</h1>
+            <p>Empowering Organizations Through Professional Development</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#consultation">Free Consultation</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Transform Your Organization's Potential</h2>
+            <p>We build and facilitate professional development opportunities, workshops, and ongoing training for leaders, teams, and staff tailored to the needs and initiatives of large-scale organizations.</p>
+            <a href="#consultation" class="cta-button">Get Your FREE 30-Minute Consultation</a>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Professional Development</h3>
+                    <p>Customized professional development programs designed to enhance skills, boost performance, and drive organizational success. We work closely with your team to identify needs and create targeted solutions.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Workshops & Training</h3>
+                    <p>Interactive workshops and comprehensive training sessions that engage participants and deliver measurable results. From leadership development to team building, we cover all aspects of organizational growth.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Ongoing Support</h3>
+                    <p>Continuous training and support programs that ensure lasting change and sustained improvement. We partner with your organization for long-term success and growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="consultation" class="consultation-form">
+        <div class="container">
+            <h2>Schedule Your FREE 30-Minute Consultation</h2>
+            <div class="form-container">
+                <div class="office-hours">
+                    <h3>Office Hours</h3>
+                    <div class="hours-grid">
+                        <div class="day-hours">
+                            <strong>Tuesday</strong><br>
+                            9:00 AM - 5:00 PM
+                        </div>
+                        <div class="day-hours">
+                            <strong>Wednesday</strong><br>
+                            9:00 AM - 5:00 PM
+                        </div>
+                        <div class="day-hours">
+                            <strong>Thursday</strong><br>
+                            9:00 AM - 5:00 PM
+                        </div>
+                    </div>
+                </div>
+                
+                <form id="consultationForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="organization">Organization Name *</label>
+                        <input type="text" id="organization" name="organization" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="role">Your Role/Title</label>
+                        <input type="text" id="role" name="role">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="preferred-day">Preferred Day</label>
+                        <select id="preferred-day" name="preferred-day">
+                            <option value="">Select a day</option>
+                            <option value="tuesday">Tuesday</option>
+                            <option value="wednesday">Wednesday</option>
+                            <option value="thursday">Thursday</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="preferred-time">Preferred Time</label>
+                        <select id="preferred-time" name="preferred-time">
+                            <option value="">Select a time</option>
+                            <option value="9:00 AM">9:00 AM</option>
+                            <option value="10:00 AM">10:00 AM</option>
+                            <option value="11:00 AM">11:00 AM</option>
+                            <option value="12:00 PM">12:00 PM</option>
+                            <option value="1:00 PM">1:00 PM</option>
+                            <option value="2:00 PM">2:00 PM</option>
+                            <option value="3:00 PM">3:00 PM</option>
+                            <option value="4:00 PM">4:00 PM</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="challenges">What challenges is your organization facing? *</label>
+                        <textarea id="challenges" name="challenges" placeholder="Please describe your current challenges and what you hope to achieve through professional development..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="cta-button" style="width: 100%;">Schedule My Free Consultation</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <p style="font-size: 1.1em; margin-bottom: 2rem;">
+                    Ready to transform your organization's potential? We're here to help you create customized professional development solutions that drive real results.
+                </p>
+                <div style="background: #f8f9fa; padding: 2rem; border-radius: 10px;">
+                    <h3 style="color: #2c3e50; margin-bottom: 1rem;">Get In Touch</h3>
+                    <p><strong>Email:</strong> frostom@visionscholar.com</p>
+                    <p><strong>Phone:</strong> (413) 770-2944</p>
+                    <p><strong>Office Hours:</strong> Tuesday - Thursday, 9:00 AM - 5:00 PM</p>
+                    <p style="margin-top: 1rem; color: #666;">
+                        We respond to all inquiries within 24 hours during business hours.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Vision Scholar Educational Consulting. All rights reserved.</p>
+            <p>Empowering Organizations Through Professional Development</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handler
+        document.getElementById('consultationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Simple validation
+            if (!data.name || !data.email || !data.organization || !data.challenges) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Here you would typically send the data to your server
+            // For now, we'll show a success message
+            alert('Thank you for your interest! We will contact you within 24 hours to schedule your free consultation.');
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>
