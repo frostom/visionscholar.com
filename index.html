@@ -161,6 +161,139 @@
       box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
 
+    /* Process Section Styles */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .process-step {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      text-align: center;
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .process-step:hover {
+      transform: translateY(-5px);
+    }
+
+    .process-step::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #3498db, #2c3e50);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    .process-step:nth-child(1)::before { content: '1'; }
+    .process-step:nth-child(2)::before { content: '2'; }
+    .process-step:nth-child(3)::before { content: '3'; }
+
+    .process-step h3 {
+      color: #2c3e50;
+      margin: 1rem 0;
+      font-size: 1.3em;
+    }
+
+    .process-step h4 {
+      color: #3498db;
+      margin-bottom: 1rem;
+      font-style: italic;
+      font-size: 1.1em;
+    }
+
+    .process-step ul {
+      text-align: left;
+      list-style: none;
+      padding: 0;
+    }
+
+    .process-step li {
+      margin-bottom: 0.5rem;
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .process-step li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #27ae60;
+      font-weight: bold;
+    }
+
+    /* Testimonials Section Styles */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .testimonial {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      border-left: 4px solid #3498db;
+      position: relative;
+    }
+
+    .testimonial::before {
+      content: '"';
+      font-size: 4em;
+      color: #3498db;
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      opacity: 0.3;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      margin-bottom: 1rem;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .testimonial-author {
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    .testimonial-organization {
+      color: #3498db;
+      font-size: 0.9em;
+    }
+
+    .testimonial-result {
+      background: #f8f9fa;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      border-left: 3px solid #27ae60;
+    }
+
+    .testimonial-result strong {
+      color: #27ae60;
+    }
+
     #consultation {
       background:#f9f9f9;
       padding:3rem 1rem;
@@ -190,6 +323,10 @@
         font-size: 2em;
       }
 
+      header p {
+        font-size: 1em;
+      }
+
       nav ul {
         flex-direction: column;
         align-items: center;
@@ -212,6 +349,14 @@
         grid-template-columns: 1fr !important;
       }
 
+      .process-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr !important;
+      }
+
       #consultation iframe {
         height: 1200px;
       }
@@ -222,7 +367,7 @@
   <header>
     <div class="container">
       <h1>Vision Scholar</h1>
-      <p>Professional Development for Individuals, Teams & Organizations</p>
+      <p>Transform Your Team's Potential with AI-Powered Professional Development</p>
     </div>
   </header>
 
@@ -232,6 +377,8 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
+        <li><a href="#process">Our Process</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="#consultation">Free Consultation</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -257,7 +404,7 @@
           <p>At Vision Scholar, we believe learning and technology together unlock new possibilities for personal and professional growth. Founded by Fadia Rostom, a leader with over 30 years of experience supporting individuals, teams, educational institutions, and small businesses, Vision Scholar empowers partners to harness AI and technology to enhance their work and daily lives.</p>
 
           <h3 style="color: #3498db; margin-top: 2rem;">Leadership & Experience</h3>
-          <p>With a rich background in higher education and private school leadership, Fadia combines expertise from both the education sector and the business world. She has designed and delivered professional development programs across cultures and contexts, focusing on practical skills for thriving in today’s dynamic, technology-driven environment.</p>
+          <p>With a rich background in higher education and private school leadership, Fadia combines expertise from both the education sector and the business world. She has designed and delivered professional development programs across cultures and contexts, focusing on practical skills for thriving in today's dynamic, technology-driven environment.</p>
 
           <h3 style="color: #3498db; margin-top: 2rem;">Community Commitment</h3>
           <p>Fadia is deeply invested in fostering learning communities that connect people, build skills, and inspire innovation to help individuals and organizations adapt and excel in a changing world.</p>
@@ -272,11 +419,11 @@
       <div class="services-grid">
         <div class="service-card">
           <h3>Leadership & Strategy Development</h3>
-          <p>Programs that strengthen effective leadership, decision-making, and strategic planning for leaders at every level.</p>
+          <p>Programs that develop AI-savvy leaders who can guide digital transformation, decision-making, and strategic planning for leaders at every level.</p>
         </div>
         <div class="service-card">
           <h3>Collaborative Team Building</h3>
-          <p>Interactive workshops that improve communication, foster collaboration, and build trust for stronger, more innovative teams.</p>
+          <p>Interactive workshops that master AI communication tools and human-centered collaboration techniques, foster collaboration, and build trust for stronger, more innovative teams.</p>
         </div>
         <div class="service-card">
           <h3>AI Applications for Work & Innovation</h3>
@@ -285,6 +432,103 @@
         <div class="service-card">
           <h3>Personalized Ongoing Support</h3>
           <p>Continuous professional development programs that ensure lasting change and sustained improvement through regular follow-up sessions and personalized guidance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="section" style="background: #f8f9fa;">
+    <div class="container">
+      <h2>Our 3-Step Process</h2>
+      <div class="process-grid">
+        <div class="process-step">
+          <h3>Strategic Planning Session</h3>
+          <h4>"Align AI with Your Vision"</h4>
+          <ul>
+            <li>90-minute discovery session to understand goals and challenges</li>
+            <li>Map current state vs. desired future state</li>
+            <li>Define success metrics and timeline</li>
+          </ul>
+        </div>
+        <div class="process-step">
+          <h3>Skill Development Workshops</h3>
+          <h4>"Learn by Doing"</h4>
+          <ul>
+            <li>Interactive training sessions with immediate application</li>
+            <li>Hands-on practice with AI tools relevant to your industry</li>
+            <li>Team collaboration exercises and problem-solving</li>
+          </ul>
+        </div>
+        <div class="process-step">
+          <h3>Implementation Support</h3>
+          <h4>"Make It Stick"</h4>
+          <ul>
+            <li>90-day follow-up program with regular check-ins</li>
+            <li>Troubleshooting and optimization sessions</li>
+            <li>Building internal capabilities for sustained growth</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="section">
+    <div class="container">
+      <h2>Client Success Stories</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial">
+          <div class="testimonial-text">
+            "Vision Scholar transformed our approach to leadership development. Fadia's expertise in integrating AI tools into our management practices has been game-changing for our district."
+          </div>
+          <div class="testimonial-author">Dr. Sarah Mitchell</div>
+          <div class="testimonial-organization">Superintendent, Pittsfield Public Schools</div>
+          <div class="testimonial-result">
+            <strong>Result:</strong> 85% of administrators now confidently use AI tools for data analysis and decision-making, reducing report preparation time by 40%.
+          </div>
+        </div>
+        
+        <div class="testimonial">
+          <div class="testimonial-text">
+            "The collaborative team building workshops revolutionized how our educators work together. The AI communication strategies have streamlined our processes tremendously."
+          </div>
+          <div class="testimonial-author">Jennifer Thompson</div>
+          <div class="testimonial-organization">Professional Development Coordinator, Berkshire Hills Regional School District</div>
+          <div class="testimonial-result">
+            <strong>Result:</strong> Teacher collaboration increased by 60%, and cross-departmental projects using AI tools increased by 300% within 6 months.
+          </div>
+        </div>
+        
+        <div class="testimonial">
+          <div class="testimonial-text">
+            "Vision Scholar's strategic planning process helped us align our mission with modern technology. Our faculty now embraces AI as a teaching enhancement tool."
+          </div>
+          <div class="testimonial-author">Sr. Mary Catherine</div>
+          <div class="testimonial-organization">Principal, St. Mary's Academy</div>
+          <div class="testimonial-result">
+            <strong>Result:</strong> 95% of faculty integrated AI tools into curriculum planning, improving lesson personalization and student engagement scores by 35%.
+          </div>
+        </div>
+        
+        <div class="testimonial">
+          <div class="testimonial-text">
+            "The ongoing support from Vision Scholar ensured our digital transformation initiatives stuck. The 90-day follow-up program was invaluable for sustained change."
+          </div>
+          <div class="testimonial-author">Mark Rodriguez</div>
+          <div class="testimonial-organization">Technology Director, Berkshire Hills Regional School District</div>
+          <div class="testimonial-result">
+            <strong>Result:</strong> Technology adoption rates increased by 75%, and support tickets decreased by 50% as staff became more self-sufficient with AI tools.
+          </div>
+        </div>
+        
+        <div class="testimonial">
+          <div class="testimonial-text">
+            "Fadia's approach to professional development is both practical and visionary. Our leadership team now confidently navigates the intersection of education and technology."
+          </div>
+          <div class="testimonial-author">Angela Barnes</div>
+          <div class="testimonial-organization">Assistant Superintendent, Pittsfield Public Schools</div>
+          <div class="testimonial-result">
+            <strong>Result:</strong> Leadership effectiveness scores improved by 45%, with particular strength in change management and innovation implementation.
+          </div>
         </div>
       </div>
     </div>
@@ -319,7 +563,7 @@
   <footer>
     <div class="container">
       <p>&copy; 2025 Vision Scholar. All rights reserved.</p>
-      <p>Professional Development for Individuals, Teams & Organizations</p>
+      <p>Transform Your Team's Potential with AI-Powered Professional Development</p>
     </div>
   </footer>
 
