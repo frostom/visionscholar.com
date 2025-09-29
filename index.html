@@ -462,6 +462,10 @@
       #consultation iframe {
         height: 1200px;
       }
+
+      #contact > div > div > div {
+        grid-template-columns: 1fr !important;
+      }
     }
   </style>
 </head>
@@ -707,17 +711,28 @@
   <section id="contact" class="section">
     <div class="container">
       <h2>Contact Us</h2>
-      <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-        <p style="font-size: 1.1em; margin-bottom: 2rem;">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <p style="text-align: center; font-size: 1.2em; margin-bottom: 3rem; color: #555;">
           Ready to transform your organization's potential? We're here to help you create customized professional development solutions that drive real results.
         </p>
-        <div style="background: #f8f9fa; padding: 2rem; border-radius: 10px;">
-          <h3 style="color: #2c3e50; margin-bottom: 1rem;">Get In Touch</h3>
-          <p><strong>Email:</strong> frostom@visionscholar.com</p>
-          <p><strong>Phone:</strong> (413) 770-2944</p>
-          <p style="margin-top: 1rem; color: #666;">
-            We respond to all inquiries within 24 hours during business hours.
-          </p>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;">
+          <div style="background: linear-gradient(135deg, #2c3e50, #3498db); padding: 3rem 2rem; border-radius: 15px; color: white; text-align: center;">
+            <h3 style="color: white; margin-bottom: 2rem; font-size: 1.8em;">Let's Connect</h3>
+            <div style="margin-bottom: 2rem;">
+              <div style="font-size: 1.1em; margin-bottom: 0.5rem; opacity: 0.9;">📧 Email</div>
+              <a href="mailto:frostom@visionscholar.com" style="color: white; text-decoration: none; font-size: 1.1em; font-weight: bold;">frostom@visionscholar.com</a>
+            </div>
+            <div>
+              <div style="font-size: 1.1em; margin-bottom: 0.5rem; opacity: 0.9;">📞 Phone</div>
+              <a href="tel:4137702944" style="color: white; text-decoration: none; font-size: 1.1em; font-weight: bold;">(413) 770-2944</a>
+            </div>
+          </div>
+          <div style="background: #f8f9fa; padding: 3rem 2rem; border-radius: 15px; display: flex; flex-direction: column; justify-content: center;">
+            <h3 style="color: #2c3e50; margin-bottom: 1.5rem; font-size: 1.5em;">Quick Response Promise</h3>
+            <p style="color: #555; line-height: 1.8; margin-bottom: 1.5rem;">We respond to all inquiries within 24 hours during business hours.</p>
+            <p style="color: #555; line-height: 1.8; margin-bottom: 2rem;">Prefer to schedule a time? Click below to book your free 30-minute consultation directly on our calendar.</p>
+            <a href="https://calendly.com/frostom-visionscholar/free-30-minute-consultation" target="_blank" class="cta-button" style="display: inline-block; text-align: center;">Book Your Free Consultation</a>
+          </div>
         </div>
       </div>
     </div>
