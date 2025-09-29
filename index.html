@@ -294,6 +294,95 @@
       color: #27ae60;
     }
 
+    /* Social Proof Stats Section */
+    .stats-section {
+      background: linear-gradient(135deg, #2c3e50, #3498db);
+      color: white;
+      padding: 3rem 0;
+      text-align: center;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .stat-item {
+      padding: 1rem;
+    }
+
+    .stat-number {
+      font-size: 2.5em;
+      font-weight: bold;
+      color: #fff;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-size: 1em;
+      opacity: 0.9;
+    }
+
+    /* Who We Serve Section */
+    .serve-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .serve-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      border-left: 4px solid #3498db;
+    }
+
+    .serve-card h3 {
+      color: #2c3e50;
+      margin-bottom: 1rem;
+      font-size: 1.3em;
+    }
+
+    .serve-card p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* FAQ Section */
+    .faq-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: white;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      border-left: 4px solid #3498db;
+    }
+
+    .faq-question {
+      color: #2c3e50;
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-bottom: 0.8rem;
+    }
+
+    .faq-answer {
+      color: #555;
+      line-height: 1.7;
+    }
+
     #consultation {
       background:#f9f9f9;
       padding:3rem 1rem;
@@ -349,6 +438,19 @@
         grid-template-columns: 1fr !important;
       }
 
+      .serve-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem;
+      }
+
+      .stat-number {
+        font-size: 2em;
+      }
+
       .process-grid {
         grid-template-columns: 1fr !important;
       }
@@ -377,8 +479,10 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
+        <li><a href="#who-we-serve">Who We Serve</a></li>
         <li><a href="#process">Our Process</a></li>
         <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="https://calendly.com/frostom-visionscholar/free-30-minute-consultation" target="_blank">Free Consultation</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -415,6 +519,57 @@
 
           <h3 style="color: #3498db; margin-top: 2rem;">Our Commitment</h3>
           <p>We're not here to sell you on AI hype. We're here to help you discover how AI can genuinely enhance your work, strengthen your teams, and align with your values. Every partnership begins with your goals and ends with measurable results that matter to your organization.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stats-section">
+    <div class="container">
+      <h2 style="margin-bottom: 1rem;">Trusted by Leading Organizations</h2>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number">30+</span>
+          <span class="stat-label">Years of Experience</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Educators Trained</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">15+</span>
+          <span class="stat-label">Organizations Served</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">95%</span>
+          <span class="stat-label">Client Satisfaction</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="who-we-serve" class="section">
+    <div class="container">
+      <h2>Who We Serve</h2>
+      <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem; font-size: 1.1em; color: #555;">
+        We partner with forward-thinking organizations ready to embrace AI as a tool for growth, innovation, and human potential.
+      </p>
+      <div class="serve-grid">
+        <div class="serve-card">
+          <h3>K-12 School Districts</h3>
+          <p>Leadership teams navigating AI policy, implementation, and educator training. We help superintendents and principals build AI-ready cultures that enhance teaching and learning while addressing ethical concerns.</p>
+        </div>
+        <div class="serve-card">
+          <h3>Higher Education Institutions</h3>
+          <p>Faculty development programs for AI-enhanced teaching, research support, and administrative efficiency. We bridge the gap between academic tradition and technological innovation.</p>
+        </div>
+        <div class="serve-card">
+          <h3>Non-Profit Organizations</h3>
+          <p>Staff training for operational efficiency, grant writing enhancement, and mission-driven AI applications. We help non-profits do more with limited resources through smart technology adoption.</p>
+        </div>
+        <div class="serve-card">
+          <h3>Small-Medium Businesses</h3>
+          <p>Team upskilling for competitive advantage, workflow optimization, and customer service enhancement. We make enterprise-level AI capabilities accessible to growing organizations.</p>
         </div>
       </div>
     </div>
@@ -495,6 +650,43 @@
             "Fadia delivered an exceptionally engaging professional development experience for our educators. Participants consistently praised her as an 'amazing' and 'excellent' facilitator who made content both informative and interactive. Teachers appreciated her compassionate, relatable approach and her ability to create a safe space for risk-taking and growth. Her personal immigrant journey added valuable perspective, making the workshop both professionally enriching and personally inspiring. Educators left feeling motivated and eager to attend future sessions with Fadia."
           </div>
           <div class="testimonial-organization">Pittsfield Public Schools</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section" style="background: #f8f9fa;">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">Do we need existing AI expertise to benefit from your programs?</div>
+          <div class="faq-answer">Not at all. We meet you where you are. Our programs are designed for teams at every level—from AI-curious to AI-confident. Whether you're just starting to explore AI or looking to deepen your existing capabilities, we tailor our approach to your current knowledge and goals.</div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">How long does transformation typically take?</div>
+          <div class="faq-answer">Most clients see immediate results from workshops, with sustained change developing over our 90-day implementation support period. That said, AI integration is a journey, not a destination. We focus on building internal capabilities so your team continues to grow long after our formal engagement ends.</div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">What if our organization is hesitant about AI?</div>
+          <div class="faq-answer">That's exactly why our approach works. We address concerns head-on, demonstrate practical value through hands-on experience, and build confidence gradually. Many of our most successful partnerships started with skeptical teams who became AI champions once they saw how technology could enhance rather than replace their work.</div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">Do you work with organizations outside education?</div>
+          <div class="faq-answer">Yes! While we have deep education expertise, our methods work for any team-based organization ready to embrace AI thoughtfully. We've successfully served non-profits, small businesses, and mission-driven organizations across various sectors.</div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">What happens after our free consultation?</div>
+          <div class="faq-answer">After our 30-minute consultation, we'll send you a custom proposal within 48 hours outlining recommended programs, timeline, and investment. There's absolutely no pressure—take time to review with your team. When you're ready to move forward, we'll schedule your Discovery & Alignment session and transformation begins!</div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">How do you measure success?</div>
+          <div class="faq-answer">Success metrics are defined collaboratively during our Discovery & Alignment session based on your unique goals. Common measures include: adoption rates of new tools, time savings on routine tasks, employee confidence scores, innovation metrics, and qualitative feedback. We believe in tangible results that matter to your organization, not vanity metrics.</div>
         </div>
       </div>
     </div>
