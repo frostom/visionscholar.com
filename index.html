@@ -5,6 +5,468 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vision Scholar - Professional Development & Workshops</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background: linear-gradient(135deg, #2c3e50, #3498db);
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.5rem;
+      font-weight: 300;
+    }
+
+    header p {
+      font-size: 1.2em;
+      opacity: 0.9;
+    }
+
+    nav {
+      background: #34495e;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav li {
+      margin: 0 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background: #3498db;
+    }
+
+    .hero {
+      background: #ecf0f1;
+      padding: 4rem 0;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 2.2em;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-button {
+      background: #e74c3c;
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1em;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+
+    .cta-button:hover {
+      background: #c0392b;
+    }
+
+    .section {
+      padding: 4rem 0;
+    }
+
+    .section h2 {
+      text-align: center;
+      font-size: 2.2em;
+      margin-bottom: 2rem;
+      color: #2c3e50;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .service-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .service-card h3 {
+      color: #3498db;
+      margin-bottom: 1rem;
+      font-size: 1.5em;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 3rem;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    .about-image {
+      text-align: center;
+    }
+
+    .about-image img {
+      width: 250px;
+      height: 300px;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    /* Process Section Styles */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .process-step {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      text-align: center;
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .process-step:hover {
+      transform: translateY(-5px);
+    }
+
+    .process-step::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #3498db, #2c3e50);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    .process-step:nth-child(1)::before { content: '1'; }
+    .process-step:nth-child(2)::before { content: '2'; }
+    .process-step:nth-child(3)::before { content: '3'; }
+
+    .process-step h3 {
+      color: #2c3e50;
+      margin: 1rem 0;
+      font-size: 1.3em;
+    }
+
+    .process-step h4 {
+      color: #3498db;
+      margin-bottom: 1rem;
+      font-style: italic;
+      font-size: 1.1em;
+    }
+
+    .process-step ul {
+      text-align: left;
+      list-style: none;
+      padding: 0;
+    }
+
+    .process-step li {
+      margin-bottom: 0.5rem;
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .process-step li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #27ae60;
+      font-weight: bold;
+    }
+
+    /* Testimonials Section Styles */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .testimonial {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      border-left: 4px solid #3498db;
+      position: relative;
+    }
+
+    .testimonial::before {
+      content: '"';
+      font-size: 4em;
+      color: #3498db;
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      opacity: 0.3;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      margin-bottom: 1rem;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .testimonial-author {
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    .testimonial-organization {
+      color: #3498db;
+      font-size: 0.9em;
+    }
+
+    .testimonial-result {
+      background: #f8f9fa;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      border-left: 3px solid #27ae60;
+    }
+
+    .testimonial-result strong {
+      color: #27ae60;
+    }
+
+    /* Social Proof Stats Section */
+    .stats-section {
+      background: linear-gradient(135deg, #2c3e50, #3498db);
+      color: white;
+      padding: 3rem 0;
+      text-align: center;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .stat-item {
+      padding: 1rem;
+    }
+
+    .stat-number {
+      font-size: 2.5em;
+      font-weight: bold;
+      color: #fff;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-size: 1em;
+      opacity: 0.9;
+    }
+
+    /* Who We Serve Section */
+    .serve-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .serve-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      border-left: 4px solid #3498db;
+    }
+
+    .serve-card h3 {
+      color: #2c3e50;
+      margin-bottom: 1rem;
+      font-size: 1.3em;
+    }
+
+    .serve-card p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* FAQ Section */
+    .faq-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: white;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      border-left: 4px solid #3498db;
+    }
+
+    .faq-question {
+      color: #2c3e50;
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-bottom: 0.8rem;
+    }
+
+    .faq-answer {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    #consultation {
+      background:#f9f9f9;
+      padding:3rem 1rem;
+    }
+
+    #consultation iframe {
+      border: none;
+      width: 100%;
+      max-width: 700px;
+      height: 900px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      header p {
+        font-size: 1em;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero h2 {
+        font-size: 1.8em;
+      }
+
+      .hero p {
+        font-size: 1em;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .serve-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem;
+      }
+
+      .stat-number {
+        font-size: 2em;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      #consultation iframe {
+        height: 1200px;
+      }
+
+      #contact > div > div > div {
+        grid-template-columns: 1fr !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -14,6 +476,7 @@
       <p>Transform Your Team's Potential with AI-Powered Professional Development</p>
     </div>
   </header>
+
   <nav>
     <div class="container">
       <ul>
@@ -29,6 +492,7 @@
       </ul>
     </div>
   </nav>
+
   <section id="home" class="hero">
     <div class="container">
       <h2>Transform Your Potential in the Age of AI</h2>
@@ -36,6 +500,7 @@
       <a href="https://calendly.com/frostom-visionscholar/free-30-minute-consultation" target="_blank" class="cta-button">Get Your FREE 30-Minute Consultation</a>
     </div>
   </section>
+
   <section id="about" class="section">
     <div class="container">
       <h2>About Vision Scholar</h2>
@@ -52,9 +517,9 @@
           <p>We bridge the gap between cutting-edge AI capabilities and real-world application. Through hands-on workshops, strategic planning, and ongoing support, we help individuals and teams move from AI-curious to AI-confident. Our programs don't just teach tools—they transform mindsets, build capabilities, and create cultures where innovation flourishes.</p>
 
           <h3 style="color: #3498db; margin-top: 2rem;">Leadership Rooted in Experience</h3>
-          <p>With 30+ years in education and organizational leadership, Fadia unites technical expertise with a compassionate, human-centered approach to AI integration[web:1]. Backed by degrees in Computer Science and Information Technology plus a license in educational leadership, she turns complex technology into practical tools for growth[web:1].</p>
+          <p>With over 30 years of experience in education and organizational leadership, Fadia brings a unique perspective to AI integration. She understands that sustainable change happens when people feel supported, not overwhelmed. Her approach combines deep expertise in adult learning with practical knowledge of AI applications, making complex technology accessible and actionable.</p>
 
-          <p style="margin-top: 1rem;">As an immigrant who has navigated multiple cultural and professional transitions, Fadia brings authentic understanding and warmth to every collaboration, shaping Vision Scholar’s commitment to accessible, sustainable change[web:1].</p>
+          <p style="margin-top: 1rem;">As an immigrant who has navigated multiple cultural and professional transitions, Fadia brings authentic understanding to the challenges of adaptation and growth. This perspective shapes Vision Scholar's compassionate, human-centered approach to technological transformation.</p>
 
           <h3 style="color: #3498db; margin-top: 2rem;">Our Commitment</h3>
           <p>We're not here to sell you on AI hype. We're here to help you discover how AI can genuinely enhance your work, strengthen your teams, and align with your values. Every partnership begins with your goals and ends with measurable results that matter to your organization.</p>
@@ -62,6 +527,7 @@
       </div>
     </div>
   </section>
+
   <div class="stats-section">
     <div class="container">
       <h2 style="margin-bottom: 1rem;">Trusted by Leading Organizations</h2>
@@ -85,6 +551,192 @@
       </div>
     </div>
   </div>
+
+  <section id="who-we-serve" class="section">
+    <div class="container">
+      <h2>Who We Serve</h2>
+      <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem; font-size: 1.1em; color: #555;">
+        We partner with forward-thinking organizations ready to embrace AI as a tool for growth, innovation, and human potential.
+      </p>
+      <div class="serve-grid">
+        <div class="serve-card">
+          <h3>K-12 School Districts</h3>
+          <p>Leadership teams navigating AI policy, implementation, and educator training. We help superintendents and principals build AI-ready cultures that enhance teaching and learning while addressing ethical concerns.</p>
+        </div>
+        <div class="serve-card">
+          <h3>Higher Education Institutions</h3>
+          <p>Faculty development programs for AI-enhanced teaching, research support, and administrative efficiency. We bridge the gap between academic tradition and technological innovation.</p>
+        </div>
+        <div class="serve-card">
+          <h3>Non-Profit Organizations</h3>
+          <p>Staff training for operational efficiency, grant writing enhancement, and mission-driven AI applications. We help non-profits do more with limited resources through smart technology adoption.</p>
+        </div>
+        <div class="serve-card">
+          <h3>Small-Medium Businesses</h3>
+          <p>Team upskilling for competitive advantage, workflow optimization, and customer service enhancement. We make enterprise-level AI capabilities accessible to growing organizations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>AI-Powered Leadership Development</h3>
+          <p style="color: #3498db; font-style: italic; margin-bottom: 1rem;">Lead with Confidence in the Digital Age</p>
+          <p>Build leaders who don't just understand AI—they champion it. Our programs develop strategic thinking, change management skills, and the confidence to guide teams through technological transformation. Leaders learn to make AI-informed decisions while keeping human values at the center.</p>
+        </div>
+        <div class="service-card">
+          <h3>Team Collaboration in the AI Era</h3>
+          <p style="color: #3498db; font-style: italic; margin-bottom: 1rem;">Blend Human Creativity with AI Capabilities</p>
+          <p>Transform how your teams work together by mastering AI communication tools alongside human-centered collaboration techniques. Through interactive workshops, teams discover how to leverage AI for routine tasks while amplifying their uniquely human skills—creativity, empathy, and strategic thinking.</p>
+        </div>
+        <div class="service-card">
+          <h3>Hands-On AI Integration Workshops</h3>
+          <p style="color: #3498db; font-style: italic; margin-bottom: 1rem;">From AI-Curious to AI-Confident</p>
+          <p>Learn by doing with practical, industry-specific AI applications. Our workshops cut through the hype to teach the tools and techniques that will actually enhance your work. Participants leave with immediately applicable skills and the confidence to experiment, adapt, and grow.</p>
+        </div>
+        <div class="service-card">
+          <h3>90-Day Implementation Support</h3>
+          <p style="color: #3498db; font-style: italic; margin-bottom: 1rem;">Make Transformation Stick</p>
+          <p>Real change doesn't happen overnight. Our ongoing support ensures your AI initiatives take root and flourish. Through regular check-ins, troubleshooting sessions, and capability building, we help you move from initial enthusiasm to sustained excellence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="section" style="background: #f8f9fa;">
+    <div class="container">
+      <h2>Our 3-Step Process</h2>
+      <div class="process-grid">
+        <div class="process-step">
+          <h3>Discovery & Alignment</h3>
+          <h4>"Start Where You Are"</h4>
+          <ul>
+            <li>90-minute discovery session where we listen first, strategize second</li>
+            <li>Identify AI opportunities that align with your values and goals—not just what's trendy</li>
+            <li>Map your transformation journey from where you are to where you want to be</li>
+            <li>Define success metrics that matter to your organization, not just technology adoption rates</li>
+          </ul>
+        </div>
+        <div class="process-step">
+          <h3>Active Learning & Practice</h3>
+          <h4>"Build Confidence Through Doing"</h4>
+          <ul>
+            <li>Hands-on training where every participant works with real AI tools, not slides about them</li>
+            <li>Industry-specific applications tailored to your team's actual challenges</li>
+            <li>Collaborative problem-solving that builds both technical skills and team confidence</li>
+            <li>Safe experimentation space where questions are welcomed and mistakes fuel learning</li>
+          </ul>
+        </div>
+        <div class="process-step">
+          <h3>Sustained Growth & Mastery</h3>
+          <h4>"From Momentum to Excellence"</h4>
+          <ul>
+            <li>90-day follow-up program with regular touchpoints when you need them most</li>
+            <li>Real-time troubleshooting as challenges emerge in daily work</li>
+            <li>Capability building so your team becomes self-sufficient, not dependent</li>
+            <li>Progress celebration recognizing wins and adjusting strategies as you grow</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="section">
+    <div class="container">
+      <h2>Client Success Stories</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial">
+          <div class="testimonial-text">
+            "Fadia delivered an exceptionally engaging professional development experience for our educators. Participants consistently praised her as an 'amazing' and 'excellent' facilitator who made content both informative and interactive. Teachers appreciated her compassionate, relatable approach and her ability to create a safe space for risk-taking and growth. Her personal immigrant journey added valuable perspective, making the workshop both professionally enriching and personally inspiring. Educators left feeling motivated and eager to attend future sessions with Fadia."
+          </div>
+          <div class="testimonial-organization">Pittsfield Public Schools</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section" style="background: #f8f9fa;">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">Do we need existing AI expertise to benefit from your programs?</div>
+          <div class="faq-answer">Not at all. We meet you where you are. Our programs are designed for teams at every level—from AI-curious to AI-confident. Whether you're just starting to explore AI or looking to deepen your existing capabilities, we tailor our approach to your current knowledge and goals.</div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">How long does transformation typically take?</div>
+          <div class="faq-answer">Most clients see immediate results from workshops, with sustained change developing over our 90-day implementation support period. That said, AI integration is a journey, not a destination. We focus on building internal capabilities so your team continues to grow long after our formal engagement ends.</div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">What if our organization is hesitant about AI?</div>
+          <div class="faq-answer">That's exactly why our approach works. We address concerns head-on, demonstrate practical value through hands-on experience, and build confidence gradually. Many of our most successful partnerships started with skeptical teams who became AI champions once they saw how technology could enhance rather than replace their work.</div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">Do you work with organizations outside education?</div>
+          <div class="faq-answer">Yes! While we have deep education expertise, our methods work for any team-based organization ready to embrace AI thoughtfully. We've successfully served non-profits, small businesses, and mission-driven organizations across various sectors.</div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">What happens after our free consultation?</div>
+          <div class="faq-answer">After our 30-minute consultation, we'll send you a custom proposal within 48 hours outlining recommended programs, timeline, and investment. There's absolutely no pressure—take time to review with your team. When you're ready to move forward, we'll schedule your Discovery & Alignment session and transformation begins!</div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">How do you measure success?</div>
+          <div class="faq-answer">Success metrics are defined collaboratively during our Discovery & Alignment session based on your unique goals. Common measures include: adoption rates of new tools, time savings on routine tasks, employee confidence scores, innovation metrics, and qualitative feedback. We believe in tangible results that matter to your organization, not vanity metrics.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="consultation" class="section">
+    <div class="container">
+      <h2>Book Your Free 30-Minute Consultation</h2>
+      <div style="text-align: center; margin-top: 2rem;">
+        <p style="font-size: 1.2em; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+          Ready to explore how AI can transform your team's potential? Schedule a complimentary 30-minute consultation to discuss your goals and discover how Vision Scholar can help.
+        </p>
+        <a href="https://calendly.com/frostom-visionscholar/free-30-minute-consultation" target="_blank" class="cta-button" style="font-size: 1.2em; padding: 1.2rem 2.5rem;">Schedule Your Consultation Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div style="max-width: 800px; margin: 0 auto;">
+        <p style="text-align: center; font-size: 1.2em; margin-bottom: 3rem; color: #555;">
+          Ready to transform your organization's potential? We're here to help you create customized professional development solutions that drive real results.
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;">
+          <div style="background: linear-gradient(135deg, #2c3e50, #3498db); padding: 3rem 2rem; border-radius: 15px; color: white; text-align: center;">
+            <h3 style="color: white; margin-bottom: 2rem; font-size: 1.8em;">Let's Connect</h3>
+            <div style="margin-bottom: 2rem;">
+              <div style="font-size: 1.1em; margin-bottom: 0.5rem; opacity: 0.9;">📧 Email</div>
+              <a href="mailto:frostom@visionscholar.com" style="color: white; text-decoration: none; font-size: 1.1em; font-weight: bold;">frostom@visionscholar.com</a>
+            </div>
+            <div>
+              <div style="font-size: 1.1em; margin-bottom: 0.5rem; opacity: 0.9;">📞 Phone</div>
+              <a href="tel:4137702944" style="color: white; text-decoration: none; font-size: 1.1em; font-weight: bold;">(413) 770-2944</a>
+            </div>
+          </div>
+          <div style="background: #f8f9fa; padding: 3rem 2rem; border-radius: 15px; display: flex; flex-direction: column; justify-content: center;">
+            <h3 style="color: #2c3e50; margin-bottom: 1.5rem; font-size: 1.5em;">Quick Response Promise</h3>
+            <p style="color: #555; line-height: 1.8; margin-bottom: 1.5rem;">We respond to all inquiries within 24 hours during business hours.</p>
+            <p style="color: #555; line-height: 1.8; margin-bottom: 2rem;">Prefer to schedule a time? Click below to book your free 30-minute consultation directly on our calendar.</p>
+            <a href="https://calendly.com/frostom-visionscholar/free-30-minute-consultation" target="_blank" class="cta-button" style="display: inline-block; text-align: center;">Book Your Free Consultation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <div class="container">
