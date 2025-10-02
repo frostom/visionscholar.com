@@ -238,104 +238,60 @@
       font-weight: bold;
     }
 
-    /* Enhanced Testimonials Section Styles */
-    #testimonials {
-      background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
-    }
-
-    .testimonials-intro {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 3rem;
-      font-size: 1.15em;
-      color: #555;
-      line-height: 1.8;
-    }
-
+    /* Testimonials Section Styles */
     .testimonials-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-      gap: 2.5rem;
-      margin-top: 3rem;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
     }
 
     .testimonial {
       background: white;
-      padding: 2.5rem;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      border-top: 5px solid #3498db;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      border-left: 4px solid #3498db;
       position: relative;
-      transition: all 0.3s ease;
-    }
-
-    .testimonial:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 40px rgba(52, 152, 219, 0.15);
     }
 
     .testimonial::before {
       content: '"';
-      font-size: 5em;
+      font-size: 4em;
       color: #3498db;
       position: absolute;
-      top: 10px;
-      left: 25px;
-      opacity: 0.15;
-      font-family: Georgia, serif;
-      line-height: 1;
+      top: -10px;
+      left: 20px;
+      opacity: 0.3;
     }
 
     .testimonial-text {
       font-style: italic;
-      margin-bottom: 1.5rem;
-      font-size: 1.05em;
-      line-height: 1.8;
-      color: #444;
-      position: relative;
-      z-index: 1;
-    }
-
-    .testimonial-footer {
-      margin-top: 2rem;
-      padding-top: 1.5rem;
-      border-top: 2px solid #ecf0f1;
+      margin-bottom: 1rem;
+      font-size: 1.1em;
+      line-height: 1.6;
     }
 
     .testimonial-author {
       font-weight: bold;
       color: #2c3e50;
-      font-size: 1.15em;
-      margin-bottom: 0.3rem;
     }
 
     .testimonial-organization {
       color: #3498db;
-      font-size: 0.95em;
-      line-height: 1.5;
-    }
-
-    .testimonial-highlight {
-      background: linear-gradient(135deg, #ecf8ff 0%, #f0f8ff 100%);
-      padding: 1.2rem;
-      border-radius: 10px;
-      margin-top: 1.5rem;
-      border-left: 4px solid #3498db;
-    }
-
-    .testimonial-highlight-title {
-      font-weight: bold;
-      color: #2c3e50;
       font-size: 0.9em;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 0.5rem;
     }
 
-    .testimonial-highlight-text {
-      color: #555;
-      font-size: 0.95em;
-      line-height: 1.6;
+    .testimonial-result {
+      background: #f8f9fa;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      border-left: 3px solid #27ae60;
+    }
+
+    .testimonial-result strong {
+      color: #27ae60;
     }
 
     /* Social Proof Stats Section */
@@ -700,36 +656,13 @@
 
   <section id="testimonials" class="section">
     <div class="container">
-      <h2>What Educators & Leaders Are Saying</h2>
-      <p class="testimonials-intro">
-        Don't just take our word for it. Here's what educational leaders and organizations say about their experience partnering with Vision Scholar.
-      </p>
+      <h2>Client Success Stories</h2>
       <div class="testimonials-grid">
         <div class="testimonial">
           <div class="testimonial-text">
-            "Fadia delivered an exceptionally engaging professional development experience for our educators. Participants consistently praised her as an 'amazing' and 'excellent' facilitator who made content both informative and interactive. Teachers appreciated her compassionate, relatable approach and her ability to create a safe space for risk-taking and growth. Her personal immigrant journey added valuable perspective, making the workshop both professionally enriching and personally inspiring."
+            "Fadia delivered an exceptionally engaging professional development experience for our educators. Participants consistently praised her as an 'amazing' and 'excellent' facilitator who made content both informative and interactive. Teachers appreciated her compassionate, relatable approach and her ability to create a safe space for risk-taking and growth. Her personal immigrant journey added valuable perspective, making the workshop both professionally enriching and personally inspiring. Educators left feeling motivated and eager to attend future sessions with Fadia."
           </div>
-          <div class="testimonial-highlight">
-            <div class="testimonial-highlight-title">Impact</div>
-            <div class="testimonial-highlight-text">Educators left feeling motivated and eager to attend future sessions with Fadia.</div>
-          </div>
-          <div class="testimonial-footer">
-            <div class="testimonial-organization">Pittsfield Public Schools Educators</div>
-          </div>
-        </div>
-        
-        <div class="testimonial">
-          <div class="testimonial-text">
-            "Fadia is an experienced school leader who understands the imperative to place students at the center of all we do as educators. She is thoughtful and intentional in her approach to the challenges schools face in 2025, leading with compassion."
-          </div>
-          <div class="testimonial-highlight">
-            <div class="testimonial-highlight-title">Key Strength</div>
-            <div class="testimonial-highlight-text">Student-centered leadership combined with compassionate, intentional problem-solving for modern educational challenges.</div>
-          </div>
-          <div class="testimonial-footer">
-            <div class="testimonial-author">Beth Hamilton</div>
-            <div class="testimonial-organization">Senior Associate Director for New England Association of Schools and Colleges, Inc.</div>
-          </div>
+          <div class="testimonial-organization">Pittsfield Public Schools</div>
         </div>
       </div>
     </div>
@@ -776,4 +709,65 @@
     <div class="container">
       <h2>Book Your Free 30-Minute Consultation</h2>
       <div style="text-align: center; margin-top: 2rem;">
-        <p style="font-size: 1.2em; margin-bottom: 2rem; max-
+        <p style="font-size: 1.2em; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+          Ready to explore how AI can transform your team's potential? Schedule a complimentary 30-minute consultation to discuss your goals and discover how Vision Scholar can help.
+        </p>
+        <a href="https://calendly.com/frostom-visionscholar/free-30-minute-consultation" target="_blank" class="cta-button" style="font-size: 1.2em; padding: 1.2rem 2.5rem;">Schedule Your Consultation Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div style="max-width: 800px; margin: 0 auto;">
+        <p style="text-align: center; font-size: 1.2em; margin-bottom: 3rem; color: #555;">
+          Ready to transform your organization's potential? We're here to help you create customized professional development solutions that drive real results.
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;">
+          <div style="background: linear-gradient(135deg, #2c3e50, #3498db); padding: 3rem 2rem; border-radius: 15px; color: white; text-align: center;">
+            <h3 style="color: white; margin-bottom: 2rem; font-size: 1.8em;">Let's Connect</h3>
+            <div style="margin-bottom: 2rem;">
+              <div style="font-size: 1.1em; margin-bottom: 0.5rem; opacity: 0.9;">📧 Email</div>
+              <a href="mailto:frostom@visionscholar.com" style="color: white; text-decoration: none; font-size: 1.1em; font-weight: bold;">frostom@visionscholar.com</a>
+            </div>
+            <div>
+              <div style="font-size: 1.1em; margin-bottom: 0.5rem; opacity: 0.9;">📞 Phone</div>
+              <a href="tel:4137702944" style="color: white; text-decoration: none; font-size: 1.1em; font-weight: bold;">(413) 770-2944</a>
+            </div>
+          </div>
+          <div style="background: #f8f9fa; padding: 3rem 2rem; border-radius: 15px; display: flex; flex-direction: column; justify-content: center;">
+            <h3 style="color: #2c3e50; margin-bottom: 1.5rem; font-size: 1.5em;">Quick Response Promise</h3>
+            <p style="color: #555; line-height: 1.8; margin-bottom: 1.5rem;">We respond to all inquiries within 24 hours during business hours.</p>
+            <p style="color: #555; line-height: 1.8; margin-bottom: 2rem;">Prefer to schedule a time? Click below to book your free 30-minute consultation directly on our calendar.</p>
+            <a href="https://calendly.com/frostom-visionscholar/free-30-minute-consultation" target="_blank" class="cta-button" style="display: inline-block; text-align: center;">Book Your Free Consultation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Vision Scholar. All rights reserved.</p>
+      <p>Transform Your Team's Potential with AI-Powered Professional Development</p>
+    </div>
+  </footer>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
