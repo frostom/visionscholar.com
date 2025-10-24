@@ -30,6 +30,29 @@
       text-align: center;
     }
 
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .logo-container {
+      width: 120px;
+      height: 120px;
+    }
+
+    .logo-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .header-text {
+      text-align: left;
+    }
+
     header h1 {
       font-size: 2.5em;
       margin-bottom: 0.5rem;
@@ -408,6 +431,20 @@
     }
 
     @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .header-text {
+        text-align: center;
+      }
+
+      .logo-container {
+        width: 100px;
+        height: 100px;
+      }
+
       header h1 {
         font-size: 2em;
       }
@@ -472,8 +509,15 @@
 <body>
   <header>
     <div class="container">
-      <h1>Vision Scholar</h1>
-      <p>Transform Your Team's Potential with AI-Powered Professional Development</p>
+      <div class="header-content">
+        <div class="logo-container">
+          <img src="vision-scholar-logo.png" alt="Vision Scholar Logo" />
+        </div>
+        <div class="header-text">
+          <h1>Vision Scholar</h1>
+          <p>Transform Your Team's Potential with AI-Powered Professional Development</p>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -675,7 +719,7 @@
         
         <div class="testimonial">
           <div class="testimonial-text">
-          "I’ve had the pleasure of working with Fadia on numerous professional development sessions, and she consistently demonstrates the qualities of an exceptional facilitator. Fadia brings deep knowledge, organization, and creativity to every session she leads. Her attention to detail, engaging presentation style, and thoughtful follow-up ensure that participants feel both supported and inspired. Collaborating with Fadia is always a seamless and enriching experience—she listens, adapts, and creates meaningful learning opportunities that have a lasting impact. I highly recommend her to any organization seeking a dedicated, skilled, and collaborative educator and coach."
+          "I've had the pleasure of working with Fadia on numerous professional development sessions, and she consistently demonstrates the qualities of an exceptional facilitator. Fadia brings deep knowledge, organization, and creativity to every session she leads. Her attention to detail, engaging presentation style, and thoughtful follow-up ensure that participants feel both supported and inspired. Collaborating with Fadia is always a seamless and enriching experience—she listens, adapts, and creates meaningful learning opportunities that have a lasting impact. I highly recommend her to any organization seeking a dedicated, skilled, and collaborative educator and coach."
           </div>
           <div class="testimonial-author">Judy Rush</div>
           <div class="testimonial-organization">Educational Consultant.</div>
@@ -693,7 +737,7 @@
           <div class="testimonial-text">
             "Working with Fadia has been transformative. Her ability to lead with clarity, empathy, and conviction creates an environment where every participant feels both challenged and supported. 
 
-Working with Fadia as our NEASC Chair was an inspiring and enriching experience. She led with both precision and compassion, guiding our team through reflection, growth, and meaningful dialogue that strengthened our shared commitment to excellence. Fadia’s ability to balance high expectations with genuine care makes her an exceptional educator and leader. I would wholeheartedly recommend her to any organization seeking purposeful growth and lasting impact."
+Working with Fadia as our NEASC Chair was an inspiring and enriching experience. She led with both precision and compassion, guiding our team through reflection, growth, and meaningful dialogue that strengthened our shared commitment to excellence. Fadia's ability to balance high expectations with genuine care makes her an exceptional educator and leader. I would wholeheartedly recommend her to any organization seeking purposeful growth and lasting impact."
           </div>
           <div class="testimonial-author">Julie Capirchio</div>
           <div class="testimonial-organization">Principal, Saint Joseph School.</div>
@@ -755,7 +799,7 @@ Working with Fadia as our NEASC Chair was an inspiring and enriching experience.
         <p style="font-size: 1.2em; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
           Ready to explore how AI can transform your team's potential? Schedule a complimentary consultation to discuss your goals and discover how Vision Scholar can help.
         </p>
-        <a href="https://calendly.com/frostom-visionscholar/free consultation" target="_blank" class="cta-button" style="font-size: 1.2em; padding: 1.2rem 2.5rem;">Schedule Your Consultation Now</a>
+        <a href="https://calendly.com/frostom-visionscholar/free-30-minute-consultation" target="_blank" class="cta-button" style="font-size: 1.2em; padding: 1.2rem 2.5rem;">Schedule Your Consultation Now</a>
       </div>
     </div>
   </section>
@@ -783,7 +827,7 @@ Working with Fadia as our NEASC Chair was an inspiring and enriching experience.
             <h3 style="color: #2c3e50; margin-bottom: 1.5rem; font-size: 1.5em;">Quick Response Promise</h3>
             <p style="color: #555; line-height: 1.8; margin-bottom: 1.5rem;">We respond to all inquiries within 24 hours during business hours.</p>
             <p style="color: #555; line-height: 1.8; margin-bottom: 2rem;">Prefer to schedule a time? Click below to book your free consultation directly on our calendar.</p>
-            <a href="https://calendly.com/frostom-visionscholar/free consultation" target="_blank" class="cta-button" style="display: inline-block; text-align: center;">Book Your Free Consultation</a>
+            <a href="https://calendly.com/frostom-visionscholar/free-30-minute-consultation" target="_blank" class="cta-button" style="display: inline-block; text-align: center;">Book Your Free Consultation</a>
           </div>
         </div>
       </div>
