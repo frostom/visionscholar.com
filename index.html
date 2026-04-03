@@ -291,29 +291,7 @@
     }
     .btn-summit:hover { background: var(--gold-lt); }
 
-    /* ─── PROCESS ────────────────────────────────────────── */
-    #process { background: var(--white); }
-    .process-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; position: relative;
-    }
-    .process-grid::before {
-      content: '';
-      position: absolute; top: 28px; left: calc(16.67% + 0.5rem); right: calc(16.67% + 0.5rem);
-      height: 1px; background: var(--border); z-index: 0;
-    }
-    .process-step { position: relative; z-index: 1; }
-    .step-num {
-      width: 56px; height: 56px; border-radius: 50%;
-      background: var(--navy); color: var(--white);
-      font-family: var(--font-head); font-size: 1.3rem;
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 1.25rem;
-    }
-    .step-title { font-size: 1.05rem; font-weight: 600; color: var(--navy); margin-bottom: 0.25rem; }
-    .step-sub { font-size: 0.78rem; color: var(--teal); font-style: italic; font-weight: 500; margin-bottom: 0.75rem; }
-    .process-step ul { padding-left: 0; }
-    .process-step li { font-size: 0.88rem; color: var(--text-lt); padding: 0.3rem 0; padding-left: 1rem; position: relative; }
-    .process-step li::before { content: '→'; position: absolute; left: 0; color: var(--teal); }
+
 
     /* ─── TESTIMONIALS ───────────────────────────────────── */
     #testimonials { background: var(--cream); }
@@ -330,17 +308,7 @@
     .testi-name { font-weight: 600; font-size: 0.9rem; color: var(--navy); }
     .testi-role { font-size: 0.8rem; color: var(--text-lt); }
 
-    /* ─── FAQ ────────────────────────────────────────────── */
-    #faq { background: var(--white); }
-    .faq-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
-    }
-    .faq-item {
-      background: var(--cream); border-radius: var(--radius); padding: 1.5rem;
-      border: 1px solid var(--cream-dk);
-    }
-    .faq-item h3 { font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 0.6rem; }
-    .faq-item p  { font-size: 0.87rem; color: var(--text-lt); line-height: 1.65; }
+
 
     /* ─── CONTACT ────────────────────────────────────────── */
     #contact { background: var(--navy); }
@@ -388,7 +356,6 @@
       .summit-features { grid-template-columns: repeat(2, 1fr); }
       .process-grid { grid-template-columns: 1fr; }
       .process-grid::before { display: none; }
-      .faq-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -416,7 +383,6 @@
       <li><a href="#services">Services</a></li>
       <li><a href="#summit">Summit</a></li>
       <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="#faq">FAQ</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="https://calendly.com/frostom-visionscholar/free-30-minute-consultation" class="btn-nav" target="_blank" rel="noopener">Free Consultation</a></li>
     </ul>
@@ -685,49 +651,7 @@
   </div>
 </section>
 
-<!-- ══════════════ PROCESS ══════════════ -->
-<section id="process">
-  <div class="section-inner">
-    <p class="section-label">Our Process</p>
-    <h2 class="section-title">How We Work Together</h2>
-    <p class="section-subtitle" style="margin-bottom:3rem;">A consistent, proven approach — whether you're a school, a nonprofit, or a growing business team.</p>
-    <div class="process-grid">
-      <div class="process-step">
-        <div class="step-num">01</div>
-        <div class="step-title">Discovery &amp; Alignment</div>
-        <div class="step-sub">"Start Where You Are"</div>
-        <ul>
-          <li>90-minute discovery session — we listen first, strategize second</li>
-          <li>Identify AI opportunities aligned with your values and goals</li>
-          <li>Map your transformation journey from current state to desired impact</li>
-          <li>Define success metrics that matter to your community</li>
-        </ul>
-      </div>
-      <div class="process-step">
-        <div class="step-num">02</div>
-        <div class="step-title">Active Learning &amp; Practice</div>
-        <div class="step-sub">"Build Confidence Through Doing"</div>
-        <ul>
-          <li>Hands-on training with real AI tools — not just slides about them</li>
-          <li>Applications tailored to your organization's actual challenges</li>
-          <li>Collaborative problem-solving that builds team confidence</li>
-          <li>Safe space where questions are welcomed and mistakes fuel learning</li>
-        </ul>
-      </div>
-      <div class="process-step">
-        <div class="step-num">03</div>
-        <div class="step-title">Sustained Growth</div>
-        <div class="step-sub">"From Momentum to Excellence"</div>
-        <ul>
-          <li>90-day follow-up with regular touchpoints when you need them most</li>
-          <li>Real-time troubleshooting as challenges emerge in daily work</li>
-          <li>Capability building so your team becomes self-sufficient, not dependent</li>
-          <li>Progress celebration and strategy adjustments as you grow</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!-- ══════════════ TESTIMONIALS ══════════════ -->
 <section id="testimonials">
@@ -793,46 +717,7 @@
   </div>
 </section>
 
-<!-- ══════════════ FAQ ══════════════ -->
-<section id="faq">
-  <div class="section-inner">
-    <p class="section-label">Questions &amp; Answers</p>
-    <h2 class="section-title">Frequently Asked Questions</h2>
-    <div class="faq-grid" style="margin-top:2.5rem;">
 
-      <div class="faq-item">
-        <h3>Do we need existing AI expertise to benefit from your programs?</h3>
-        <p>Not at all. We meet you where you are. Our programs are designed for educators and teams at every level — from AI-curious to those already experimenting. We tailor the depth and pace to your team's current knowledge and goals.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>How long does transformation typically take?</h3>
-        <p>Most organizations see immediate shifts in team confidence and tool adoption after a single workshop. Sustained change develops over our 90-day implementation support period. The goal is building internal capacity so growth continues long after our formal engagement ends.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>What if our team is hesitant or skeptical about AI?</h3>
-        <p>That's exactly where this work begins. We address concerns directly, demonstrate practical value through hands-on experience, and honor the professional wisdom your team already brings. Many of our most successful workshops started with skeptical rooms that left energized.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Do you work with organizations outside of K–12?</h3>
-        <p>Yes. Vision Scholar serves K–12 schools, higher education institutions, nonprofits, and small businesses. We are deeply rooted in K–12 education but actively expand that work into training teams across all types of organizations on AI literacy and responsible use.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>What happens after our free consultation?</h3>
-        <p>Within 48 hours, you'll receive a custom proposal outlining recommended services, timeline, and investment. There's no pressure — take the time you need to review with your team. When you're ready, we'll schedule your Discovery &amp; Alignment session and begin.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>How do you measure success?</h3>
-        <p>Success metrics are defined together during our Discovery session, based on your goals. Common indicators include team confidence scores, AI adoption rates, pre/post survey results, and qualitative feedback. We currently see 85–95% adoption rates across workshop participants.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
 
 <!-- ══════════════ CONTACT ══════════════ -->
 <section id="contact">
